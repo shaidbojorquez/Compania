@@ -1,0 +1,47 @@
+<%= form_with(model: company) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+        <% company.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comprador %>
+    <%= form.text_field :comprador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precioitem %>
+    <%= form.number_field :precioitem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalitems %>
+    <%= form.number_field :totalitems %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccionvendedor %>
+    <%= form.text_field :direccionvendedor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vendedor %>
+    <%= form.text_field :vendedor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

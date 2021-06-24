@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comprador:</strong>
+  <%= @company.comprador %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @company.descripcion %>
+</p>
+
+<p>
+  <strong>Precioitem:</strong>
+  <%= @company.precioitem %>
+</p>
+
+<p>
+  <strong>Totalitems:</strong>
+  <%= @company.totalitems %>
+</p>
+
+<p>
+  <strong>Direccionvendedor:</strong>
+  <%= @company.direccionvendedor %>
+</p>
+
+<p>
+  <strong>Vendedor:</strong>
+  <%= @company.vendedor %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
